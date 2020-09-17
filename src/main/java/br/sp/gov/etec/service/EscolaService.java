@@ -25,4 +25,19 @@ public class EscolaService {
 		List<Escola> escolas = repository.findAll();
 		return escolas;
 	}
+	
+	public Escola procuraPorIdEscola(long id) {
+		Escola escola = repository.findById(id);
+		return escola;
+	}
+	
+	public Escola atualizarEscola(Escola escola) {
+		Escola retorno = repository.save(escola);
+		return retorno;
+	}
+	
+	public void deletarEscola(Escola escola) {
+		repository.delete(escola);
+	}
+	
 }
