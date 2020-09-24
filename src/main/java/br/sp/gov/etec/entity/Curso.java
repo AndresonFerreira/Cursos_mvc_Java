@@ -138,6 +138,12 @@ public void setCodigo(String codigo) {
 
  }
 
+@Override
+public String toString() {
+	return "Curso [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", status=" + status + ", codigo="
+			+ codigo + "]";
+}
+
 
 
  }

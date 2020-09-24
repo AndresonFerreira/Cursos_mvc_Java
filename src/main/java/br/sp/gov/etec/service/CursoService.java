@@ -25,5 +25,22 @@ public class CursoService {
 		List<Curso> cursos = repository.findAll();
 		return cursos;	
 	}
+	
+	public Curso procurarPorIdCurso(long id) {
+		Curso curso = repository.findById(id);
+		return curso;
+	}
+	
+	public Curso atualizarCurso(Curso curso) {
+		Curso retorno = repository.save(curso);
+		return retorno;
+	}
+	
+	public void deletarCurso(Curso curso) {
+		repository.delete(curso);
+	}
+	
+
+
 
 }
